@@ -1,5 +1,10 @@
 class Solution {
     public String generateTheString(int n) {
-        return "b" + "ab".substring(n % 2, 1 + n % 2).repeat(n - 1);
+        char[] str = new char[n];
+        Arrays.fill(str, 'a');
+        if(n%2==0) {
+            str[0] = 'b';
+        }
+        return new String(str);
     }
 }
