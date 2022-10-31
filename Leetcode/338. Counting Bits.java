@@ -5,8 +5,8 @@ class Solution {
             arr[i] = 0;
             int num = i;
             while(num > 0){
-                arr[i] += num&1;
-                num >>>= 1;
+                arr[i]++;
+                num &= num-1;
             }
         }
         return arr;
